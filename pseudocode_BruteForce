@@ -1,0 +1,17 @@
+BEGIN
+    IMPORT permutations, ParenthesesChecker
+    INPUT integer n
+    FOR n:
+        APPEND string s with "()"
+    ENDFOR
+    ASSIGN answer = empty dynamically-sized array of strings
+    FOR permutation in permutations(s,n*2):
+        ASSIGN s = empty
+        FOR character in permutation:
+            APPEND s with character
+        ENDFOR
+        IF ParenthesesChecker(s) and s is not included in the answer
+            APPEND answer with s
+        ENDIF
+    RETURN answer
+END

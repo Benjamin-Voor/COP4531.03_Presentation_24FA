@@ -1,0 +1,20 @@
+BEGIN
+    METHOD generate_parenthesis
+        INPUT integer n
+        ASSIGN dynamically-sized array object arr to be empty
+        METHOD backtrack
+            INPUT string combo, integer tally of open parentheses openPar, and integer tally of closed parentheses closePar
+            IF closePar EQUALS n
+                APPEND combo to arr
+                RETURN
+            ENDIF
+            IF openPar is less than n
+                CALL backtrack(combo + '(', openPar + 1, closePar)
+            ENDIF
+            IF closePar is greater than n
+                CALL backtrack(combo + ')', openPar, closePar + 1)
+        ENDMETHOD
+        CALL backtrack("",0,0)
+        RETURN arr
+    ENDMETHOD
+END

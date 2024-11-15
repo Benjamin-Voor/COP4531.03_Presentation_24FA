@@ -1,7 +1,7 @@
-def generateParenthesis_backtrack(n):
-    array = []
-
+def generateParenthesis_backtrack(n: int, debugg=False):
+    array: object = []
     def backtrack(combo, openPar, closePar):
+        if debugg: print(tally, "Backtracking...")
         if closePar == n:  # If all the parentheses have been used, add it to the array
             array.append(combo)
             return

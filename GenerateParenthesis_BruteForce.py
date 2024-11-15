@@ -9,7 +9,7 @@ def GenerateParenthesis_helper(n: int, debugg: bool = False):
         s += '()' # Make parantheses to be shuffled
     if debugg: print(s)
     perm = permutations(s, n*2) # Generator of all permutations
-    not_answer: list[str] = []
+    if debugg: not_answer: list[str] = []
     answer: list[str] = []
     for count_comb, i in enumerate(perm): # Generate each permutation one at a time
         s = ""
@@ -21,6 +21,7 @@ def GenerateParenthesis_helper(n: int, debugg: bool = False):
         elif debugg:
             not_answer.append(s)
         if debugg: print(answer, not_answer)
+        print(count_comb)
     if debugg: print('answer:', answer)
     return answer
 
