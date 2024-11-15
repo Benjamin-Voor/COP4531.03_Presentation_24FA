@@ -8,7 +8,7 @@ if __name__ == '__main__':
         s: str = input("What is your parentheses? ")
         print(ParenthesesChecker(s))
     n: int = int(input("Brute Force input: "))
-    print("Brute-force output:", GenerateParenthesis(n, debugg))
+    print("Brute-force output: ", GenerateParenthesis(n, debugg))
     n = input("Backtracking input: ")
     try:
         n = int(n)
