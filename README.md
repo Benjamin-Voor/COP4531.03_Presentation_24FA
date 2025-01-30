@@ -1,4 +1,6 @@
-![image](https://github.com/user-attachments/assets/25160512-8355-4eb4-b756-9b3a97747992)# Analyzing the Time Complexity of the Backtracking Approach to Generating Parentheses
+# Design and Analysis of the Backtracking Approach to Generating Parentheses in Python
+
+**By**: Brian Tran and Benjamin Voor​
 
 **Course**: Algorithm Design & Analysis 
 
@@ -8,32 +10,29 @@
 
 **Date**: November 15, 2024
 
-**By**: Brian Tran and Benjamin Voor​
-
-**Course**: Algorithm Design & Analysis COP4531-03​
-
-**Instructor**: Sarker Monojit Asish​
-
-**Date**: November 15, 2024
-
-
 ## Abstract
 
 We solved an example coding problem from Leetcode.com once in the brute force approach and once in the backtracking approach. We also solved for the time complexity of each approach.
 
 ## [Problem Description](https://leetcode.com/problems/generate-parentheses/description/):
+
 Given n pairs of parentheses, write a function to generate all combinations of well-formed parentheses.
+
 **Example 1**:
+
 Input: n = 3
+
 Output: ["((()))","(()())","(())()","()(())","()()()"]
  
 **Example 2**:
+
 Input: n = 1
+
 Output: ["()"]
 
 **Constraints**:
+
 1 <= n <= 8
-![image](https://github.com/user-attachments/assets/9f3bc67c-e6df-4d11-8a34-8429b1b84ec5)
 
 ### Brute force approach
 * Permute all opening and closing parantheses as strings of length 2*n, using Python's "permutations" library.
